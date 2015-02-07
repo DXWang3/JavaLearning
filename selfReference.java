@@ -17,11 +17,11 @@ public class selfReference {
 
 "         for(int i = 0; i < 3; i++){System.out.println((char)34 + reference[i] + (char)34 + (char)44);}",
 
-"         for(int i = 3; i < 11; i++){System.out.println((char)34 + reference[i] + (char)34) + (char)44);}",
+"         for(int i = 3; i < 13; i++){System.out.println((char)34 + reference[i] + (char)34) + (char)44);}",
 
 "         System.out.println(reference[10]);",
 
-"         for(int i = 3; i < 8; i++){System.out.println(reference[i]);}",
+"         for(int i = 3; i < 10; i++){System.out.println(reference[i]);}",
 
 "         System.out.println(reference[11]);",
 
