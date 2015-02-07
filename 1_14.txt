@@ -1,0 +1,17 @@
+class: Walkman
+variables: volume of first jack
+methods: changeFirstJackVolume()
+
+subclass; twoJackWalkman extends Walkman
+
+variables: volume of second jack, volume of first jack
+methods: changeFirstJackVolume() inherited
+         changeSecondJackVolume()
+        
+        
+subclass; twoJackCommunicatingWalkman extends twoJackWalkman
+
+variables: volume of first jack (inherited), volume of second jack (inherited)
+methods: changeFirstJackVolume() inherited
+         changeSecondJackVolume() inherited
+         changeMicVolume()
