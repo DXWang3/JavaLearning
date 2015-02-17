@@ -9,7 +9,7 @@ public class Point {
 
         this.x = q.x;
         this.y = q.y;
-       
+
    }
 
 

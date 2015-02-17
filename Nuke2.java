@@ -33,18 +33,23 @@ public class Nuke2 {
 
 
 
-        char[] result = inputLine.toCharArray();
+        char[] result = inputLine.toCharArray(); //Turn string into a char array.
 
 
         char[] answer = new char[result.length - 1];
 
+
         answer[0] = result[0];
+
+        //Copy array to a new array without the second character.
 
         for (int i = 1; i < answer.length; i++){
 
 
             answer[i] = result[i+1];
         }
+
+        //print the new array without the second character.
 
         for (int i = 0; i < answer.length; i++){
 

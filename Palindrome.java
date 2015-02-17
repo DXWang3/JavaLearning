@@ -8,9 +8,14 @@ public class Palindrome {
 
         Boolean testA = palindromic("level");
         Boolean testB = palindromic("hello");
+        Boolean testC = palindromic("AbAbA");
+
 
         System.out.println(testB);
         System.out.println(testA);
+        System.out.println(testC);
+
+
 
     }
 
