@@ -1,0 +1,31 @@
+1.
+
+Set a size value to 27
+
+Set a name variable to Fido
+
+create a dog object with name Fido and size 27
+
+Determine a variable x equal to size - 5
+
+If Fido size is too small, he will bark 8 times for food.
+
+IF Fido's size is too big, he will want to play
+
+Initialize array with 4 integers.
+
+Print Hello Dog: Fido
+
+Print the second term of the array.
+
+If the last term of the array is 8, print "potato"
+
+
+2. 
+
+The program will return the index of the largest value in the array starting with the term at index k. In this case, 6
+
+This program will rearrange the array to 6,3,3,1,0. It orders terms of the array from highest to lowest. 
+
+
+
