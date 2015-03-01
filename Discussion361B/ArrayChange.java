@@ -1,7 +1,7 @@
 package Discussion361B;
 import java.util.Arrays;
 /**
- * Created by davidwang on 3/1/15.
+ * Created by davidwang on 2/26/15.
  */
 public class ArrayChange {
 
