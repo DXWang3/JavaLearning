@@ -1,0 +1,4 @@
+Integer is a class while int is primitive, so when we ran Flik, java automatically turns an int type into an Integer object
+when the isSameNumber method is invoked, since isSameNumber expected Integer objects as input, not int primitive type.
+However, Integer, is only cached between -128 and 127, so the same objects will be used. But beyond that range, separate
+objects will be created and thus the reference is different. Hence, the loop breaks at i = 128.
