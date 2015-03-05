@@ -1,0 +1,66 @@
+2.
+
+a: Animal Pluto says "Huh?"
+b: Cat Garfield says "Meow!"
+c: Dog Fido says "WOOF!"
+d: Cat Garfield says "Meow!"
+e: Cat Garfield says "Meow!"
+
+When we write d = a, we are setting a reference to a Dog towards an animal. However, not a, an variable
+referencing an Animal, is not necessarily a dog. D is of the Dog type and A is of the animal type. We would
+have to cast a to a Dog in order to make this work.
+
+
+3.
+
+ class A {
+    public int x = 5;
+    public void m1() {System.out.println("Am1-> " + x);}
+    public void m2() {System.out.println("Am2-> " + this.x);}
+    public void update() {x = 99;}
+ }
+
+
+ class B extends A {
+    public int x = 10;
+    public void m2() {System.out.println("Bm2-> " + x);}
+    public void m3() {System.out.println("Bm3-> " + super.x);}
+    public void m4() {System.out.print("Bm4-> "); super.m2();}
+ }
+
+
+ class C extends B {
+    public int y = x + 1;
+    public void m2() {System.out.println("Cm2-> " + super.x);}
+    public void m3() {System.out.println("Cm3-> " + super.super.x);}
+    public void m4() {System.out.println("Cm4-> " + y);}
+    public void m5() {System.out.println("Cm5-> " + super.y);}
+ }
+
+
+ class D {
+    public static void main (String[] args) {
+       B a0 = new A();     ***You cannot have a0 assigned to an A object when it belongs to the B subclass***
+       a0.m1();            ***For reasons above, a0 is no longer a valid object reference ***
+       A b0 = new B();
+       System.out.println(b0.x);
+       b0.m1(); // class B hides a field in class A.
+       b0.m2(); // you should never hide fields.
+       b0.m3(); // as you’ll see, it’s confusing!  ***Objects of class A don't have the m3 method in class B ***
+       B b1 = new B();
+       b1.m3();
+       b1.m4();
+       A c0 = new C();
+       c0.m1();
+       C c1 = (A) new C(); ***For similar reasons to the first line, c1 is a C class object and cannot be assigned to an A type object ***
+       A a1 = (A) c0;
+       C c2 = (C) a1;
+       c2.m4();
+       c2.m5();
+       ((C) c0).m3(); // very tricky!
+       (C) c0.m3(); ***This doesn't actually cast c0, but the return value of m3, which is void ***
+       b0.update();
+       b0.m1();
+       b0.m2();
+    }
+ }
