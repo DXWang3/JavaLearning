@@ -88,15 +88,15 @@ public class Plip extends Creature {
      */
     public Action chooseAction(Map<Direction, Occupant> neighbors) {
         List<Direction> empties = getNeighborsOfType(neighbors, "empty");
-        if (empties.size()==0){
+        if (empties.size() == 0){
             return new Action(Action.ActionType.STAY);
         }
-        if (energy>1.0){
+        if (energy > 1.0){
             return new Action(Action.ActionType.REPLICATE,empties.get(0));
         }
         List<Direction> badguys = getNeighborsOfType(neighbors,"clorus");
-        if (badguys.size()>0){
-            if (Math.random()>.5){
+        if (badguys.size() > 0){
+            if (Math.random() > .5){
                 return new Action(Action.ActionType.MOVE, empties.get((int)(Math.random()*empties.size())));
             }
         }
