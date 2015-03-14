@@ -31,35 +31,35 @@ public class Clorus extends Creature {
     }
 
     public void attack(Creature c){
-        energy+=c.energy();
+        energy += c.energy();
     }
 
     public void move() {
-        energy -=0.03;
+        energy -= 0.03;
     }
 
     public Creature replicate() {
         Clorus baby = new Clorus(energy/2);
-        energy=energy/2;
+        energy = energy/2;
         return baby;
     }
 
     public void stay() {
-        energy -=0.01;
+        energy -= 0.01;
     }
 
     public Action chooseAction(Map<Direction, Occupant> neighbors) {
         List<Direction> empties = getNeighborsOfType(neighbors, "empty");
-        if (empties.size()==0){
+        if (empties.size() == 0){
             return new Action(Action.ActionType.STAY);
         }
         List<Direction> food = getNeighborsOfType(neighbors, "plip");
 
-        if (food.size()>0){
+        if (food.size() > 0){
             return new Action(Action.ActionType.ATTACK, food.get((int)(Math.random()*food.size())));
         }
 
-        if (energy>=1){
+        if (energy >= 1){
             return new Action(Action.ActionType.REPLICATE, empties.get(0));
         }
 
