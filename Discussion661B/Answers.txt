@@ -1,0 +1,40 @@
+2.1:
+
+   Using either stack or queue will work. The number of left and right parentheses should be the same,
+   so if you push an object into the structure for each left parentheses and pop one for each right
+   parentheses, you should end up with an empty structure at the end if the sequence is correct.
+
+2.2:
+
+   Input all of the birth country data into a set to find the number of different countries of origin,
+   since sets don't add duplicates.
+
+2.3:
+
+   Use the helper method to sort the characters with all possible permutations, then you can use a map to
+   assign each entry in the list to one of the permutative groups. So, I could assign the value "cat" to the
+   key "{cat, tac, act, tca, cta, tac}" by adding "cat" to the list associated with that permutation key.
+   So the map would be organized something like this:
+
+   Key:  {cat, tac, act, tca, cta, tac} Value: {cat, act, tac}
+   Key: {love, lveo, ....evol} Value: {love}
+   Key: {bat, bta, atb, abt, tba, tab} value: {bat, tab}
+
+3.1:
+
+   Create the first map to have the normal Key and value designation where each key references a corresponding value.
+   Create a second map with the values as the key, and vice versa. Then, you can call getByValue by calling getByKey on
+   the reversed map (the second one)
+   To implement numLessThan(K), extract the keys of the map and sort them. Then you can increment the counter starting
+   from the first key until you get to a key which is bigger than K.
+
+3.2:
+
+   You can add x into a list, sort the list, and find the middle indexed value to get the median.
+
+3.3 (extra):
+
+
+
+
+
